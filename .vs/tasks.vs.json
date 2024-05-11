@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-Entites",
+      "appliesTo": "Entites/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "задача-ModelShop",
+      "appliesTo": "Entites/ModelShop.edmx",
+      "type": "launch"
+    }
+  ]
+}

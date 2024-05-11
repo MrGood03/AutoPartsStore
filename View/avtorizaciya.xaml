@@ -1,0 +1,90 @@
+﻿<Window x:Class="WPFProject.View.avtorizaciya"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject.View"
+        mc:Ignorable="d"
+        Title="Главное меню" Height="320" Width="500"
+        Icon="C:\MKod\С#\WPFProject\Resurs\icon.ico"
+        MinHeight="320"
+        MinWidth="500"
+        MaxHeight="620"
+        MaxWidth="800"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Load">           
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"   Style="{DynamicResource Head}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"  />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1"   Text="Авторизация"  FontSize="32"   Height="36" Width="230" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource Text}" />
+            <Button x:Name="Exit"  Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top"  Style="{DynamicResource ButtonStyle}" Click="menu_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="1" FontSize="10"  Text="Меню" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource Text}" />
+                    <Image Source="C:\MKod\С#\WPFProject\Resurs\Exit.png" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="20"/>
+                </Grid>
+            </Button>
+            <Image Grid.Column="0" Source="C:\MKod\С#\WPFProject\Resurs\logotip.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Style="{DynamicResource Center}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Логин" FontSize="16" Style="{DynamicResource Text}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20"/>
+                <TextBox Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Left" x:Name="Login"/>
+
+            </Grid>
+            <Grid Grid.Row="1" Style="{DynamicResource Center}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.9*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Пароль" FontSize="16" Style="{DynamicResource Text}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20"/>
+                <PasswordBox Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Left" x:Name="Password"/>
+                <TextBox Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Left" x:Name="PasswordHide"/>
+                <CheckBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="pass" Click="Hide"/>
+
+
+            </Grid>
+            <Grid Grid.Row="2" Style="{DynamicResource Center}">
+                <Button  x:Name="UpdateCatalog" Style="{DynamicResource ButtonMain}"  HorizontalAlignment="Stretch" Click="Enter">
+                    <Grid  Width="194">
+
+                        <TextBlock Grid.Column="2" Text="Войти" FontSize="16"  Style="{DynamicResource Text}" HorizontalAlignment="Center"  />
+                    </Grid>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Style="{DynamicResource Head}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="terehoff" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Style="{DynamicResource Text}"/>
+            <TextBlock Grid.Column="1" Text="tererhoff.eg@yandex.ru" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Style="{DynamicResource Text}"/>
+        </Grid>
+    </Grid>
+</Window>
